@@ -1,0 +1,120 @@
+/* .container {
+  text-align: center;
+  max-width: 100%;
+  margin: auto;
+} */
+
+/* Ensuring full width for the main container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; /* Centering the container */
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid black;
+}
+
+.navigation {
+  /* This will place the navigation at the top right */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.navigation a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.title-container {
+  /* This centers the title above the picture */
+  display: flex;
+  justify-content: center;
+  margin-top: 60px; /* Adjust this value to move the title up or down */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin: 20px;
+}
+
+.profile-pic-container {
+  margin-bottom: 20px;
+}
+
+.profile-pic-placeholder {
+  width: 270.63px;
+  height: 221.39px;
+  margin: auto; /* Center the placeholder horizontally */
+  position: relative; /* Position relative to allow absolute positioning inside */
+  border: 5px solid black;
+}
+
+/* Diagonal line from top-left to bottom-right */
+.profile-pic-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, transparent calc(50% - 1px), black, transparent calc(50% + 1px));
+}
+
+/* Diagonal line from bottom-left to top-right */
+.profile-pic-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, transparent calc(50% - 1px), black, transparent calc(50% + 1px));
+}
+
+.bio {
+  border: 2px;
+  padding: 20px;
+}
+
+/* Owner page specific styles */
+.owner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px 0; /* Add some padding at the top and bottom */
+}
+
+.owner-container .button-container {
+  width: 100%; /* Full width for the button container */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.owner-container table {
+  width: 90%; /* Adjust the width of the table */
+  margin: 0 auto; /* Center the table */
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
